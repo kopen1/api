@@ -18,12 +18,12 @@
   },
     "repository": {
     "type": "git",
-    "url": "git+https://github.com/kopen1/isline.git"
+    "url": "git+https://github.com/kopen1/api.git"
   },
   "bugs": {
-    "url": "https://github.com/kopen1/isline/issues"
+    "url": "https://github.com/kopen1/api/issues"
   },
   
-  "homepage": "https://github.com/kopen1/"
+  "homepage": "https://github.com/kopen1/api"
   
 }
