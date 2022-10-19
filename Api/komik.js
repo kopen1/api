@@ -59,12 +59,12 @@ let data = [];
 let xx = $(".judulseries > a");
 xx.each((i,v) =>{
 let url = local+$(v).attr("href");
-data.push(url)
+data.push({url})
 })
 return res.send({
   status: 200,
   judul,img,description,
-  url_chapter : data})
+  chapter : data})
 })
 })
 // chapter
