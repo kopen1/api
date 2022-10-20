@@ -78,7 +78,7 @@ let data = [];
 $("#Baca_Komik > img").each((i,v) =>{
 let img = $(v).attr("src").replace("cdn.komiku.co.id","img.komiku.id");
 let no = $(v).attr("id");
-data.push(img)
+data.push({"chapter" : img})
 })
 return res.send(data)
 })
