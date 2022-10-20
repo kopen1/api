@@ -83,8 +83,7 @@ data.push(img)
 return res.send(data)
 })
 }catch(error){
- console.log(error) 
-return res.send(error) 
+return res.send("data kosong") 
 }
 
 })
