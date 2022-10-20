@@ -69,6 +69,27 @@ return res.send({
 })
 // chapter
 komik.get("/ch/:id",async(req,res) =>{
+  try{
+const url = base+"/ch/"+req.params.id;
+axios.get(url)
+.then((e) =>{
+const $ = cheerio.load(e.data)
+let data = [];
+$("#Baca_Komik > img").each((i,v) =>{
+let img = $(v).attr("src").replace("cdn.komiku.co.id","img.komiku.id");
+let no = $(v).attr("id");
+data.push(img)
+})
+return res.send(data)
+})
+}catch(error){
+ console.log(error) 
+return res.send(error) 
+}
+
+})
+/*
+komik.get("/ch/:id",async(req,res) =>{
 const url = base+"/ch/"+req.params.id;
 axios.get(url)
 .then((e) =>{
@@ -82,7 +103,7 @@ data.push(img)
 res.send(data)
 })
 })
-
+*/
 komik.use("*",(req,res) =>{
      res.send({
     api: `KOMIK | v1`,
